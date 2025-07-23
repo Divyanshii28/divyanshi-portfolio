@@ -1,0 +1,162 @@
+/* Creative vCard Redesign - Base Style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&family=Raleway:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  color: #333;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Sidebar Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+
+.navbar a:hover {
+  color: #0d6efd;
+}
+
+/* Hero */
+.hero {
+  margin-left: 260px;
+  padding: 100px 40px;
+  background: radial-gradient(circle at top left, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  text-align: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.hero .profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Main Sections */
+main {
+  margin-left: 260px;
+}
+
+.section {
+  padding: 80px 40px;
+  background: #fff;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #0d6efd;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, #0d6efd, #3f8efc);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #0b5ed7;
+  transform: scale(1.05);
+}
+
+footer {
+  margin-left: 260px;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    justify-content: center;
+  }
+
+  .hero,
+  main,
+  footer {
+    margin-left: 0;
+    padding: 60px 20px;
+  }
+}
